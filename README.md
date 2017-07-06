@@ -1,5 +1,5 @@
 Under the hood: ReactJS中文版本。
-[原版英文链接](https://github.com/Bogdan-Lyashenko/Under-the-hood-ReactJS).
+[原版英文链接](https://github.com/Bogdan-Lyashenko/Under-the-hood-ReactJS)
 
 # Under the hood: ReactJS
 # ReactJS引擎解密

@@ -1,6 +1,10 @@
 ## Intro
 
+## 简介
+
 ### Scheme, first look
+
+### 整图，初次相识
 
 
 [![](../images/intro/all-page-stack-reconciler-25-scale.jpg)](../images/intro/all-page-stack-reconciler.svg)

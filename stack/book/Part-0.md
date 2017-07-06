@@ -1,16 +1,31 @@
 ## Part 0
 
+## 第一部分
+
 [![](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/0/part-0.svg)](https://rawgit.com/Bogdan-Lyashenko/Under-the-hood-ReactJS/master/stack/images/0/part-0.svg)
 
 <em>0.0 Part 0 (clickable)</em>
 
+<em>0.0 第一部分 (可点击)</em>
+
 ### ReactDOM.render
+
+### ReactDOM.render
+
 Alright, let’s start with a call of ReactDOM.render.
+
+没错，我们就从ReactDOM.render开始。
 
 The entry point is ReactDom.render, our app is started rendering into DOM from here. I created simple component `<ExampleApplication/>` to debug easier. So, the first thing which happens is **JSX will be transformed into React elements**. They are pretty simple, almost plain objects with a simple structure. They just represent what was returned from component’s render, nothing more. Some fields are already familiar for you, fields like props, key, ref. Property type refers to markup object described by JSX. So, in our case, it’s class `ExampleApplication`, but it also can be just string ‘button’ for Button tag etc. Also, during React element creation React will merge `defaultProps` with props (if they were specified) and validate propTypes. Check source code for more details
 (`src\isomorphic\classic\element\ReactElement.js`)
 
+入口是ReactDOM.render，我们的app就是从这里开始渲染到DOM中去的。我创建了一个简单的组件 `<ExampleApplication/>`用来方便调试。那第一件事情就是**JSX将会被转换成React元素**。React元素非常简单，就是一个普通的对象。它的一些属性都是我们已经熟悉的，比如props, key, ref。属性type用来描述对象的，在我们这个例子中，它是类`ExampleApplication`，当然，如果是Button标签的话，可能就是一个字符串‘button’。同时，在React元素创建过程中，还会merge一些默认属性和校验的propTypes，更多了解请看
+(`src\isomorphic\classic\element\ReactElement.js`)
+
 ### ReactMount
+
+### ReactMount
+
 You can see the module called `ReactMount` (01), it contains the logic of components mounting. Actually, there is no logic inside `ReactDOM`, it is just an interface to work with `ReactMount`, so when you call `ReactDOM.render` you technically call `ReactMount.render`. What is all that mounting about?
 > Mounting is the process of initializing a React component by creating its representative DOM elements and inserting them into a supplied `container`.
 
